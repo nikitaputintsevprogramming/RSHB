@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using UnityEngine;
 
 public class UpDown : MonoBehaviour
 {
@@ -40,7 +39,9 @@ public class UpDown : MonoBehaviour
         }
 
         // Установка окончательной позиции (это нужно, чтобы избежать небольшой погрешности)
-        transform.localPosition = new Vector3(transform.localPosition.x, end, transform.localPosition.z); ;
+        transform.localPosition = new Vector3(transform.localPosition.x, end, transform.localPosition.z);
+
+        Debug.LogFormat("time: {0}, deltaTime: {1}, timeScale:{2}", Time.time, Time.deltaTime, Time.timeScale);
     }
 }
 
